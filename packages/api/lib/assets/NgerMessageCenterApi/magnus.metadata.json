@@ -1,0 +1,56 @@
+{
+  "query": [
+    [
+      "home",
+      "HomeGraphql",
+      "",
+      "home",
+      [],
+      {
+        "type": "String",
+        "typeArguments": []
+      }
+    ]
+  ],
+  "mutation": [
+    [
+      "sendTextMessage",
+      "TextMessageGraphql",
+      "",
+      "sendTextMessage",
+      [
+        {
+          "name": "input",
+          "type": "TextMessageInput!",
+          "index": 0,
+          "decorator": []
+        }
+      ],
+      {
+        "type": "SendTextMessageResult",
+        "isEntity": false,
+        "typeArguments": []
+      }
+    ]
+  ],
+  "subscription": [
+    [
+      "receiveTextMessage",
+      "TextMessageGraphql",
+      "",
+      "receiveTextMessage",
+      [],
+      {
+        "type": "AsyncIterator",
+        "isEntity": false,
+        "typeArguments": [
+          {
+            "type": "TextMessage",
+            "isEntity": false,
+            "typeArguments": []
+          }
+        ]
+      }
+    ]
+  ]
+}

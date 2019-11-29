@@ -1,0 +1,5 @@
+{
+    "inputs": [ "lib/**/*.ts" ],
+    "name": "NgerMessageCenterApi",
+    "assets": "lib/assets"
+}
