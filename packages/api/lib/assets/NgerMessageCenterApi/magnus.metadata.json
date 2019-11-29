@@ -14,6 +14,82 @@
   ],
   "mutation": [
     [
+      "sendImageMessage",
+      "ImageMessageGraphql",
+      "",
+      "sendImageMessage",
+      [
+        {
+          "name": "input",
+          "type": "ImageMessageInput!",
+          "index": 0,
+          "decorator": []
+        }
+      ],
+      {
+        "type": "SendImageMessageResult",
+        "isEntity": false,
+        "typeArguments": []
+      }
+    ],
+    [
+      "sendLinkMessage",
+      "LinkMessageGraphql",
+      "",
+      "sendLinkMessage",
+      [
+        {
+          "name": "input",
+          "type": "LinkMessageInput!",
+          "index": 0,
+          "decorator": []
+        }
+      ],
+      {
+        "type": "SendLinkMessageResult",
+        "isEntity": false,
+        "typeArguments": []
+      }
+    ],
+    [
+      "sendLocationMessage",
+      "LocationMessageGraphql",
+      "",
+      "sendLocationMessage",
+      [
+        {
+          "name": "input",
+          "type": "LocationMessageInput!",
+          "index": 0,
+          "decorator": []
+        }
+      ],
+      {
+        "type": "SendLocationMessageResult",
+        "isEntity": false,
+        "typeArguments": []
+      }
+    ],
+    [
+      "sendShortVideoMessage",
+      "ShortVideoMessageGraphql",
+      "",
+      "sendShortVideoMessage",
+      [
+        {
+          "name": "input",
+          "type": "ShortVideoMessageInput!",
+          "index": 0,
+          "decorator": []
+        }
+      ],
+      {
+        "type": "SendShortVideoMessageResult",
+        "isEntity": false,
+        "typeArguments": []
+      }
+    ],
+    [
       "sendTextMessage",
       "TextMessageGraphql",
       "",
@@ -31,9 +107,119 @@
         "isEntity": false,
         "typeArguments": []
       }
+    ],
+    [
+      "sendVideoMessage",
+      "VideoMessageGraphql",
+      "",
+      "sendVideoMessage",
+      [
+        {
+          "name": "input",
+          "type": "VideoMessageInput!",
+          "index": 0,
+          "decorator": []
+        }
+      ],
+      {
+        "type": "SendVideoMessageResult",
+        "isEntity": false,
+        "typeArguments": []
+      }
+    ],
+    [
+      "sendVoiceMessage",
+      "VoiceMessageGraphql",
+      "",
+      "sendVoiceMessage",
+      [
+        {
+          "name": "input",
+          "type": "VoiceMessageInput!",
+          "index": 0,
+          "decorator": []
+        }
+      ],
+      {
+        "type": "SendVoiceMessageResult",
+        "isEntity": false,
+        "typeArguments": []
+      }
     ]
   ],
   "subscription": [
+    [
+      "receiveImageMessage",
+      "ImageMessageGraphql",
+      "",
+      "receiveImageMessage",
+      [],
+      {
+        "type": "AsyncIterator",
+        "isEntity": false,
+        "typeArguments": [
+          {
+            "type": "ImageMessage",
+            "isEntity": false,
+            "typeArguments": []
+          }
+        ]
+      }
+    ],
+    [
+      "receiveLinkMessage",
+      "LinkMessageGraphql",
+      "",
+      "receiveLinkMessage",
+      [],
+      {
+        "type": "AsyncIterator",
+        "isEntity": false,
+        "typeArguments": [
+          {
+            "type": "LinkMessage",
+            "isEntity": false,
+            "typeArguments": []
+          }
+        ]
+      }
+    ],
+    [
+      "receiveLocationMessage",
+      "LocationMessageGraphql",
+      "",
+      "receiveLocationMessage",
+      [],
+      {
+        "type": "AsyncIterator",
+        "isEntity": false,
+        "typeArguments": [
+          {
+            "type": "LocationMessage",
+            "isEntity": false,
+            "typeArguments": []
+          }
+        ]
+      }
+    ],
+    [
+      "receiveShortVideoMessage",
+      "ShortVideoMessageGraphql",
+      "",
+      "receiveShortVideoMessage",
+      [],
+      {
+        "type": "AsyncIterator",
+        "isEntity": false,
+        "typeArguments": [
+          {
+            "type": "ShortVideoMessage",
+            "isEntity": false,
+            "typeArguments": []
+          }
+        ]
+      }
+    ],
     [
       "receiveTextMessage",
       "TextMessageGraphql",
@@ -46,6 +232,42 @@
         "typeArguments": [
           {
             "type": "TextMessage",
+            "isEntity": false,
+            "typeArguments": []
+          }
+        ]
+      }
+    ],
+    [
+      "receiveVideoMessage",
+      "VideoMessageGraphql",
+      "",
+      "receiveVideoMessage",
+      [],
+      {
+        "type": "AsyncIterator",
+        "isEntity": false,
+        "typeArguments": [
+          {
+            "type": "VideoMessage",
+            "isEntity": false,
+            "typeArguments": []
+          }
+        ]
+      }
+    ],
+    [
+      "receiveVoiceMessage",
+      "VoiceMessageGraphql",
+      "",
+      "receiveVoiceMessage",
+      [],
+      {
+        "type": "AsyncIterator",
+        "isEntity": false,
+        "typeArguments": [
+          {
+            "type": "VoiceMessage",
             "isEntity": false,
             "typeArguments": []
           }

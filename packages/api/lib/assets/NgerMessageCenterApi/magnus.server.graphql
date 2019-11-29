@@ -38,6 +38,106 @@ scalar Date
 
 scalar ID
 
+type SendImageMessageResult {
+  success: Boolean!
+}
+
+input ImageMessageInput {
+  toUserName: String!
+  fromUserName: String!
+  createTime: Int!
+  msgType: String!
+  picUrl: String!
+  mediaId: String!
+  msgId: Int!
+}
+
+type ImageMessage {
+  toUserName: String!
+  fromUserName: String!
+  createTime: Int!
+  msgType: String!
+  picUrl: String!
+  mediaId: String!
+  msgId: Int!
+}
+
+type SendLinkMessageResult {
+  success: Boolean!
+}
+
+input LinkMessageInput {
+  toUserName: String!
+  fromUserName: String!
+  createTime: Int!
+  msgType: String!
+  title: String!
+  description: String!
+  url: String!
+  msgId: Int!
+}
+
+type LinkMessage {
+  toUserName: String!
+  fromUserName: String!
+  createTime: Int!
+  msgType: String!
+  title: String!
+  description: String!
+  url: String!
+  msgId: Int!
+}
+
+type SendLocationMessageResult {
+  success: Boolean!
+}
+
+input LocationMessageInput {
+  toUserName: String!
+  fromUserName: String!
+  createTime: Int!
+  msgType: String!
+  location_X: Int!
+  location_Y: Int!
+  scale: Int!
+  msgId: Int!
+}
+
+type LocationMessage {
+  toUserName: String!
+  fromUserName: String!
+  createTime: Int!
+  msgType: String!
+  location_X: Int!
+  location_Y: Int!
+  scale: Int!
+  msgId: Int!
+}
+
+type SendShortVideoMessageResult {
+  success: Boolean!
+}
+
+input ShortVideoMessageInput {
+  toUserName: String!
+  fromUserName: String!
+  createTime: Int!
+  msgType: String!
+  mediaId: String!
+  thumbMediaId: String!
+  msgId: Int!
+}
+
+type ShortVideoMessage {
+  toUserName: String!
+  fromUserName: String!
+  createTime: Int!
+  msgType: String!
+  mediaId: String!
+  thumbMediaId: String!
+  msgId: Int!
+}
+
 type SendTextMessageResult {
   success: Boolean!
 }
@@ -60,14 +160,76 @@ type TextMessage {
   msgId: Int!
 }
 
+type SendVideoMessageResult {
+  success: Boolean!
+}
+
+input VideoMessageInput {
+  toUserName: String!
+  fromUserName: String!
+  createTime: Int!
+  msgType: String!
+  mediaId: String!
+  thumbMediaId: String!
+  msgId: Int!
+}
+
+type VideoMessage {
+  toUserName: String!
+  fromUserName: String!
+  createTime: Int!
+  msgType: String!
+  mediaId: String!
+  thumbMediaId: String!
+  msgId: Int!
+}
+
+type SendVoiceMessageResult {
+  success: Boolean!
+}
+
+input VoiceMessageInput {
+  toUserName: String!
+  fromUserName: String!
+  createTime: Int!
+  msgType: String!
+  mediaId: String!
+  format: String!
+  recognition: String!
+  msgId: Int!
+}
+
+type VoiceMessage {
+  toUserName: String!
+  fromUserName: String!
+  createTime: Int!
+  msgType: String!
+  mediaId: String!
+  format: String!
+  recognition: String!
+  msgId: Int!
+}
+
 type Query {
   home: String
 }
 
 type Mutation {
+  sendImageMessage(input: ImageMessageInput!): SendImageMessageResult
+  sendLinkMessage(input: LinkMessageInput!): SendLinkMessageResult
+  sendLocationMessage(input: LocationMessageInput!): SendLocationMessageResult
+  sendShortVideoMessage(input: ShortVideoMessageInput!): SendShortVideoMessageResult
   sendTextMessage(input: TextMessageInput!): SendTextMessageResult
+  sendVideoMessage(input: VideoMessageInput!): SendVideoMessageResult
+  sendVoiceMessage(input: VoiceMessageInput!): SendVoiceMessageResult
 }
 
 type Subscription {
+  receiveImageMessage: ImageMessage
+  receiveLinkMessage: LinkMessage
+  receiveLocationMessage: LocationMessage
+  receiveShortVideoMessage: ShortVideoMessage
   receiveTextMessage: TextMessage
+  receiveVideoMessage: VideoMessage
+  receiveVoiceMessage: VoiceMessage
 }
