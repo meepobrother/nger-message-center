@@ -23,7 +23,7 @@ interface SubscribeEvent {
      */
     event: string;
 }
-interface SendSubscribeEventResult { 
+interface SendSubscribeEventResult {
     success: boolean;
 }
 @Controller()
@@ -34,5 +34,7 @@ export class SubscribeEventGraphql {
     }
 
     @Mutation()
-    async sendSubscribeEvent(input: SubscribeEvent): Promise<SendSubscribeEventResult> { }
+    async sendSubscribeEvent(input: SubscribeEvent): Promise<SendSubscribeEventResult> {
+        throw new Error(`developing...`)
+    }
 }
