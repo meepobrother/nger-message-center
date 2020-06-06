@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@nestjs/graphql": "^6.5.3",
-    "apollo-server-express": "^2.9.12",
+    "apollo-server-express": "^2.14.2",
     "graphql-subscriptions": "^1.1.0"
   }
 }
